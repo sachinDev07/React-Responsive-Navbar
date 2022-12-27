@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  ml,body{
+  html,body{
     font-family: 'Oswald', sans-serif;
     font-size: 62.5%;
 
