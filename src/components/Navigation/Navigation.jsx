@@ -1,13 +1,20 @@
-import React from 'react'
-import { routes } from '../../constant'
+import React, { useState } from 'react'
+import Drawer from './Drawer';
 import Navbar from './Navbar';
 
 
 const Navigation = () => {
-  console.log(routes);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setIsOpen(!isOpen);
+  }
+
   return (
       <>
-        <Navbar />
+        <Drawer isOpen={isOpen} toggleDrawer={toggleDrawer} />
+        <Navbar toggleDrawer={toggleDrawer} />
       </>
   );
 }
